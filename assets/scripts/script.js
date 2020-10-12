@@ -1,4 +1,4 @@
-// Alphanumeric Arrays
+// Alphanumeric arrays for criteria selection
 const lowerCaseArray = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
 const upperCaseArray = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z']
 const NumberArray = ['0','1','2','3','4','5','6','7','8','9']
@@ -24,21 +24,24 @@ function criteriaSelect() {
 
 // Function will generate a password based on selected criteria
 function generatePassword (passwordLength, includeUppercase, includeNumbers, includeSymbols) {
-
     var chars = lowerCaseArray
+
+    // if uppercase characters are selected, then include in password
     if (includeUppercase) {
       var chars = chars.concat(upperCaseArray);
     }
+    // if numbers are selected, then include in password
     if (includeNumbers) {
       var chars = chars.concat(NumberArray);
     }
-
+    // if symbols are selected, then include in password
     if (includeSymbols) {
       var chars = chars.concat(SymbolArray);
     }
 
     var password = "";
 
+    // loop through random array items to generate password
     for (let i = 0; i < passwordLength; i++) {
       var randomNumber = Math.floor(Math.random() * chars.length);
 
