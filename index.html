@@ -10,14 +10,13 @@
 
   <body>
     <div class="wrapper">
-      <header>
-        <h1>Password Generator</h1>
-      </header>
+
 
       <div class="card">
         <div class="card-header">
-          <h2>Generate a Password</h2>
+          <h2>Password Generator</h2>
         </div>
+
         <div class="card-body">
           <textarea
             readonly
@@ -27,6 +26,42 @@
           ></textarea>
         </div>
         <div class="card-footer">
+          <div class="settings">
+            <div class="setting">
+              <input type="range" value="60" min="8" max="128" oninput="this.nextElementSibling.value = this.value">
+              <output>60</output>
+            </div>
+
+            <div class="setting">
+              <label for="yes-lowercase">Include lowercase letters</label>
+              <input type="checkbox" id="yes-lowercase" name="yes-lowercase" value="true" checked>
+            </div>
+
+            <div class="setting">
+              <label for="yes-uppercase">Include uppercase letters</label>
+              <input type="checkbox" id="yes-uppercase" name="yes-uppercase" value="true" checked>
+            </div>
+
+            <div class="setting">
+              <label for="yes-numbers">Include numbers</label>
+              <input type="checkbox" id="yes-numbers" name="yes-numbers" value="true" checked>
+            </div>
+
+            <div class="setting">
+              <label for="yes-symbols">Include symbols</label>
+              <input type="checkbox" id="yes-symbols" name="yes-symbols" value="true" checked>
+            </div>
+          </div>
+
+
+
+
+
+
+
+
+
+
           <button id="generate" class="btn">Generate Password</button>
         </div>
       </div>
