@@ -6,66 +6,74 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Password Generator</title>
     <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&display=swap" rel="stylesheet">
   </head>
 
   <body>
-    <div class="wrapper">
-
-
+    <!-- <div class="wrapper"> -->
       <div class="card">
-        <div class="card-header">
-          <h2>Password Generator</h2>
-        </div>
 
-        <div class="card-body">
+        <header class="card-header">
+          <h2>PASSWORD GENERATOR</h2>
+        </header>
+
+        <section class="card-body">
           <textarea
             readonly
             id="password"
+            class="password-text"
             placeholder="Your Secure Password"
             aria-label="Generated Password"
           ></textarea>
-        </div>
-        <div class="card-footer">
-          <div class="settings">
-            <div class="setting">
+
+          <form class="form">
+            <div class="slider-container">
+              <!-- <input type="range" value="60" min="8" max="128" oninput="this.nextElementSibling.value = this.value">
+              <output id="password-length">60</output> -->
+              <div class="password-length-title">Password Length</div>
               <input type="range" value="60" min="8" max="128" oninput="this.nextElementSibling.value = this.value">
-              <output>60</output>
+              <output id="password-length">60</output>
             </div>
 
-            <div class="setting">
-              <label for="yes-lowercase">Include lowercase letters</label>
-              <input type="checkbox" id="yes-lowercase" name="yes-lowercase" value="true" checked>
-            </div>
+            <label for="include-lowercase" class="switch-container">
+              <span class="switch-text">Include Lowercase Letters</span>
+              <div class="switch">
+                <input type="checkbox" id="include-lowercase" name="include-lowercase"
+                value="include-lowercase" checked>
+                <span class="slider"></span>
+              </div>
+            </label>
 
-            <div class="setting">
-              <label for="yes-uppercase">Include uppercase letters</label>
-              <input type="checkbox" id="yes-uppercase" name="yes-uppercase" value="true" checked>
-            </div>
+            <label for="include-uppercase" class="switch-container">
+              <span class="switch-text">Include Uppercase Letters</span>
+              <div class="switch">
+                <input type="checkbox" id="include-uppercase" name="include-uppercase" value="include-uppercase" checked>
+                <span class="slider"></span>
+              </div>
+            </label>
 
-            <div class="setting">
-              <label for="yes-numbers">Include numbers</label>
-              <input type="checkbox" id="yes-numbers" name="yes-numbers" value="true" checked>
-            </div>
+            <label for="include-numbers" class="switch-container">
+              <span class="switch-text">Include Numbers</span>
+              <div class="switch">
+                <input type="checkbox" id="include-numbers" name="include-numbers" value="include-numbers" checked>
+                <span class="slider"></span>
+              </div>
+            </label>
 
-            <div class="setting">
-              <label for="yes-symbols">Include symbols</label>
-              <input type="checkbox" id="yes-symbols" name="yes-symbols" value="true" checked>
-            </div>
-          </div>
+            <label for="include-symbols" class="switch-container">
+              <span class="switch-text">Include Symbols</span>
+              <div class="switch">
+                <input type="checkbox" id="include-symbols" name="include-symbols" value="include-symbols" checked>
+                <span class="slider"></span>
+              </div>
+            </label>
+          </form>
+        </section>
 
-
-
-
-
-
-
-
-
-
-          <button id="generate" class="btn">Generate Password</button>
-        </div>
-      </div>
-    </div>
+        <footer class="card-footer">
+          <button id="generate" class="btn">GENERATE PASSWORD</button>
+        </footer>
 
     <script src="assets/scripts/script.js">
     </script>
