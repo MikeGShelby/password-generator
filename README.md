@@ -2,7 +2,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Description and Purpose
-This password generator application will generate a secure, random password after prompting the user to select from multiple password character criteria. Criteria include password length between 8 and 128 characters, lowercase characters, uppercase characters, numbers, and symbols.
+A password generator application that generates a secure, random password after prompting the user to select from multiple password character criteria. Criteria include password length between 8 and 128 characters, lowercase characters, uppercase characters, numbers, and symbols.
 
 ## Table of Contents
   - [Description and Purpose](#description-and-purpose)
